@@ -10,22 +10,51 @@
     <section>
         <div class="container">
             <div class="w-screen bg-amber-50">
-                <div class="flex flex-col h-screen justify-center items-center">
-                    <div class="bg-red-600 w-64 h-96 rounded-2xl p-4">
-                        <div></div>
+                <div class="flex justify-evenly text-white">
+                    <div class="p-3 bg-green-600">
+                        <button>Liked Images</button>
                     </div>
-                    <div class="flex">
-                        <div class="p-3">
-                            <button> Like </button>
+
+                    <div class="p-3 bg-blue-600">
+                        <button>Main Application</button>
+                    </div>
+
+                    <div class=" p-3 bg-red-600">
+                        <button>Disliked Images</button>
+                    </div>
+                </div>
+
+                <!-- Liked Images -->
+                 <div id="likedImages">
+                    <p>Liked</p>
+                 </div>
+
+                 <div id="dislikedImages">
+                    <p>Disliked</p>
+                 </div>
+
+                <div class="hidden flex-col h-screen justify-center items-center"> <!-- Don'T FOrget to ADD FLEX-->
+                    <div class="flex space-x-6">
+                    </div>
+
+                    <div id="block" class="p-4"></div>
+
+                    <div class="flex ">
+
+                        <div id="dislike" class="p-3">
+                            <button id="2"> Dislike </button>
                         </div>
-                        <div class="p-3">
-                            <button>Dislike</button>
+
+                        <div id="like" class="p-3">
+                            <button id="1">Like</button>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <script src="/js/app.js"></script>
 </body>
 
 </html>
