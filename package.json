@@ -1,0 +1,23 @@
+{
+  "name": "swipe-jeux",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YounesBousfiha/Swipe-Jeux.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YounesBousfiha/Swipe-Jeux/issues"
+  },
+  "homepage": "https://github.com/YounesBousfiha/Swipe-Jeux#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.14"
+  }
+}
