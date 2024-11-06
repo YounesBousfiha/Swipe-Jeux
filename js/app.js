@@ -60,6 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function LikedImg() {
+
+        likedImages.innerHTML = '';
+
         likedImages.classList.remove("hidden");
         likedImages.classList.add("grid");
 
@@ -68,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         MainApp.classList.add("hidden");
         MainApp.classList.remove("flex");
+
 
         liked.forEach((img) => {
             let image = document.createElement('img');
@@ -81,6 +85,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function disLikedImg() {
+
+        dislikedImages.innerHTML = '';
+
         dislikedImages.classList.remove("hidden");
         dislikedImages.classList.add("grid");
 
@@ -89,6 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         MainApp.classList.add("hidden");
         MainApp.classList.remove("flex");
+
 
         disliked.forEach((img) => {
             let image = document.createElement('img');
