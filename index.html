@@ -4,42 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/src/output.css">
+    <link rel="stylesheet" href="./src/output.css">
 </head>
 <body>
     <section>
         <div class="container">
             <div class="w-screen bg-amber-50">
+                <!-- Buttons Bar-->
                 <div class="flex justify-evenly text-white">
-                    <div class="p-3 bg-green-600">
+                    <div id="likeBlock" class="p-3 bg-green-600">
                         <button>Liked Images</button>
                     </div>
 
-                    <div class="p-3 bg-blue-600">
+                    <div id="mainBlock" class="p-3 bg-blue-600">
                         <button>Main Application</button>
                     </div>
 
-                    <div class=" p-3 bg-red-600">
+                    <div id="dislikeBlock"  class=" p-3 bg-red-600">
                         <button>Disliked Images</button>
                     </div>
                 </div>
 
                 <!-- Liked Images -->
-                 <div id="likedImages">
-                    <p>Liked</p>
+                 <div id="likedImages" class="h-screen grid grid-cols-4 gap-4 justify-center items-center">
+                    
                  </div>
 
-                 <div id="dislikedImages">
-                    <p>Disliked</p>
+                 <!-- Disliked Images -->
+                 <div id="dislikedImages" class="h-screen grid grid-cols-4 gap-4 justify-center items-center">
+                    
                  </div>
 
-                <div class="hidden flex-col h-screen justify-center items-center"> <!-- Don'T FOrget to ADD FLEX-->
+                 <!-- Main A -->
+                <div id="MainApp" class="flex flex-col h-screen justify-center items-center"> <!-- Don'T Forget to ADD FLEX-->
                     <div class="flex space-x-6">
                     </div>
 
                     <div id="block" class="p-4"></div>
 
-                    <div class="flex ">
+                    <div class="flex">
 
                         <div id="dislike" class="p-3">
                             <button id="2"> Dislike </button>
@@ -54,7 +57,7 @@
             </div>
         </div>
     </section>
-    <script src="/js/app.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 
 </html>

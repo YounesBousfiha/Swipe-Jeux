@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const disliked = [];
 
     reqImage(event);
-    
+    mainAppSec();
+
     function reqImage(event) {
         fetch("https://dog.ceo/api/breeds/image/random")
             .then(res => res.json())
@@ -46,6 +47,62 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+    function mainAppSec() {
+        
+        dislikedImages.classList.add("hidden");
+        dislikedImages.classList.remove("grid");
+
+        likedImages.classList.add("hidden");
+        likedImages.classList.remove("grid");
+
+        MainApp.classList.remove("hidden");
+        MainApp.classList.add("flex");
+    }
+
+    function LikedImg() {
+        likedImages.classList.remove("hidden");
+        likedImages.classList.add("grid");
+
+        dislikedImages.classList.remove("grid");
+        dislikedImages.classList.add("hidden");
+
+        MainApp.classList.add("hidden");
+        MainApp.classList.remove("flex");
+
+        liked.forEach((img) => {
+            let image = document.createElement('img');
+            image.src = img;
+            image.style.width = "345px";
+            image.style.height = "500px";
+
+            likedImages.appendChild(image);
+        })
+
+    }
+
+    function disLikedImg() {
+        dislikedImages.classList.remove("hidden");
+        dislikedImages.classList.add("grid");
+
+        likedImages.classList.remove("grid");
+        likedImages.classList.add("hidden");
+
+        MainApp.classList.add("hidden");
+        MainApp.classList.remove("flex");
+
+        disliked.forEach((img) => {
+            let image = document.createElement('img');
+            image.src = img;
+            image.style.width = "345px";
+            image.style.height = "500px";
+
+            dislikedImages.appendChild(image);
+        })
+    }
+
+    mainBlock.addEventListener('click', mainAppSec);
+    likeBlock.addEventListener('click', LikedImg);
+    dislikeBlock.addEventListener('click', disLikedImg);
     like.addEventListener('click', (event) => reqImage(event));
     dislike.addEventListener('click', (event) => reqImage(event));
 })
